@@ -2,6 +2,8 @@
 // ** Caching Method 1:
 // export const dynamic = 'force-dynamic'
 // export const revalidate = 600; // (update cache every ___ seconds)
+export const revalidate = 1200; // not necessary, just for ISR (Incremental Static Generation) Example
+
 
 interface Post {
   title: string;
@@ -9,10 +11,23 @@ interface Post {
   content: string;
 }
 
+// SSR/ISR GENERATION: use `generateStaticParams` to return an object with the
+// parameters we want to render in advance
+// Good for dynamic data that doesn't change very often.
+export async function generateStaticParams() {
+  const posts: Post[] = await fetch('http://localhost:3000/api/content')
+    .then(res => res.json())
+  //! .catch()
+
+  return posts.map((post) => ({
+    slug: post.slug
+  }))
+}
+
+
 interface Props {
   params: { slug: string }
 }
-
 export default async function BlogPostPage({ params }: Props) {
   const posts: Post[] = await fetch('http://localhost:3000/api/content')
     // ** Caching Method 2:
