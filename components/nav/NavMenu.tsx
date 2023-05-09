@@ -6,7 +6,7 @@ export default function NavMenu() {
   return (<nav className={styles.nav}>
     <Link href={'/'}>
       <Image
-        src="logo.svg"
+        src="/logo.svg"
         width={40}
         height={40}
         alt="App Logo"
