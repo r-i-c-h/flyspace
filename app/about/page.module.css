@@ -1,0 +1,21 @@
+.custom {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  animation: fadein 2s ease-in infinite both;
+  animation-delay: .1s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
