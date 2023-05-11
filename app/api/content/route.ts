@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-
+import { getServerSession } from "next-auth";
 const posts = [
   {
     title: "The Benefits of Yoga",
@@ -24,6 +24,8 @@ const posts = [
 ];
 
 export async function GET() {
+  const session = await getServerSession();
+
   //! GET DB DATA HERE....
   return NextResponse.json(posts)
 }
