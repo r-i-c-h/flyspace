@@ -1,11 +1,12 @@
 .nav {
   background-color: #1d4ed8;
   color: #fff;
-  height: 70px;
+  height: var(--nav-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: var(--border-radius);
+  margin: 0.24rem;
 }
 
 

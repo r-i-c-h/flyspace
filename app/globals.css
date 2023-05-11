@@ -1,6 +1,6 @@
 :root {
   --link-color: hotpink;
-
+  --nav-height: 70px;
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -55,16 +55,19 @@
 
 html,
 body {
+  height: 99vh;
   max-width: 100vw;
-  min-height: 99vh;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #e3e3e3;
-  /* background:
-    linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)) no-repeat; */
+  /* background-color: #e3e3e3; */
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)) no-repeat;
+  /* color: rgb(214, 219, 220); // Whitish  */
+  /* color: rgb(255, 255, 255); // Whiter  */
 }
 
 a {
@@ -73,9 +76,14 @@ a {
 }
 
 main {
-  background-color: #efefef;
   padding: 1rem;
-  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* ⬇️ ⚠️ ⬇️ MAGIC NUMBER!! ⬇️ ⚠️ ⬇️ */
+  height: calc(100% - var(--nav-height) - 2rem - 10px);
+  min-height: 50vh;
+  background-color: #efefef;
 }
 
 footer {
