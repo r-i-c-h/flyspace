@@ -1,0 +1,29 @@
+.loader {
+  /* Change Size to be dynamic in component arguments with default of 3rem */
+  /* --size: 3rem; */
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+}
+
+.loader:after {
+  content: "";
+  /* margin: 1rem;  <-- Keeps it from being centered. */
+  display: block;
+  width: calc(0.8 * var(--size));
+  height: calc(0.8 * var(--size));
+  border-radius: 50%;
+  border: 6px solid rgb(var(--foreground-rgb));
+  border-color: rgb(var(--foreground-rgb)) transparent rgb(var(--foreground-rgb)) transparent;
+  animation: loader-spin 1.2s linear infinite;
+}
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
