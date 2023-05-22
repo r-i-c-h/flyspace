@@ -10,7 +10,7 @@ export function SignInButton() {
   console.log('Client SignIn Button Auth check', session, status)
 
   if (status === 'loading') {
-    return <LoadingSpinner size={32} />
+    return <LoadingSpinner size={"32px"} />
   }
 
   if (status === 'authenticated') {
