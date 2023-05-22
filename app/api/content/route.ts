@@ -1,3 +1,5 @@
+// Server-side function to get auth
+
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 const posts = [
