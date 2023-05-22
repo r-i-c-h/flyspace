@@ -1,7 +1,8 @@
 // Server-side function to get auth
 
-import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
+import { NextResponse } from "next/server";
+
 const posts = [
   {
     title: "The Benefits of Yoga",
