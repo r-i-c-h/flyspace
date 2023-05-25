@@ -1,5 +1,7 @@
 .error_box {
   color: red;
   font-weight: bold;
+  width: 100%;
+  padding: 2em 2em 1em 2em;
   margin: auto;
 }
