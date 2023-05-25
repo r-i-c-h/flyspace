@@ -7,7 +7,7 @@ declare module "react" {
     "--size"?: string
   }
 }
-export default function LoadingSpinner({ size }: { size: string | number }) {
+export default function LoadingSpinner({ size }: { size?: string | number }) {
   if (!size) { size = `3rem`; } //TODO: Fix hacky way to enforce a default value 🤫
   if (typeof size === 'number') {
     size = `${size}rem`
