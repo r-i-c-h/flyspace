@@ -20,7 +20,7 @@ export default function UserCard({ id, name, age, image }: CardProps) {
           src={image ?? `/mystery-avatar.svg`}
           alt={`${name}'s Profile Pic`}
           width={150}
-          height={120}
+          height={150}
           className={styles.card_image}
         />
         <div className={styles.card_content}>
