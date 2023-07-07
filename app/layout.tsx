@@ -10,19 +10,17 @@ export const metadata = {
   description: 'A Social Space that is Hip and Fly',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <AuthProvider>
-      <html lang="en">
-        <body className={inter.className}>
+    <html lang="en">
+      <body className={inter.className}>
+        {/* <div className="container"> */}
+        <AuthProvider>
           <NavMenu />
-          {children}
-        </body>
-      </html>
-    </AuthProvider>
+          <main>{children}</main>
+        </AuthProvider>
+        {/* </div> */}
+      </body>
+    </html>
   )
 }
