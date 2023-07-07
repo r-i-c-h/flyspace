@@ -37,7 +37,7 @@ export function ProfileForm({ user }: any) {//! ANY!!! Can this be refactored ou
         defaultValue={user.bio ?? ''}
       ></textarea>
 
-      <label htmlFor="age">Age?</label>
+      <label htmlFor="age">Age</label>
       <input type="text" placeholder="99" name="age" id="age" defaultValue={user.age ?? '99'} />
 
       <label htmlFor="image">Profile Image URL</label>
