@@ -3,6 +3,7 @@ import { Metadata } from "next"
 import Image from 'next/image';
 
 import styles from './page.module.css';
+import FollowButton from '../../../components/FollowButton/FollowButton';
 
 interface Props {
   params: {
@@ -18,6 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function UserProfile({ params }: Props) {
+  console.log('params.id>> ', params.id);
+
   const user = await prisma.user.findUnique({ where: { id: params.id } })
   const { name, bio, image } = user ?? {};
 
@@ -39,6 +42,9 @@ export default async function UserProfile({ params }: Props) {
 
       <h3>Bio:</h3>
       <p>{bioText}</p>
+
+      {/* @ts-expect-error Server Component issues */}
+      <FollowButton targetUserId={params.id} />
     </div>
   );
 }
