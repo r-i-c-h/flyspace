@@ -40,7 +40,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) { return (<div><h1>{`I'm sorry Dave, I'm afraid I can't do that...`}</h1></div>) }
 
   return (
-    <div>
+    <div className="container">
       <h1>{post.title}</h1>
       <p>{post.content}</p>
     </div>
