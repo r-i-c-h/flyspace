@@ -15,7 +15,7 @@ interface Post {
 // parameters we want to render in advance
 // Good for dynamic data that doesn't change very often.
 export async function generateStaticParams() {
-  const posts: Post[] = await fetch('http://localhost:3000/api/content')
+  const posts: Post[] = await fetch('http://flyspace.vercel.app/api/content')
     .then(res => res.json())
   //! .catch()
 
@@ -29,9 +29,9 @@ interface Props {
   params: { slug: string }
 }
 export default async function BlogPostPage({ params }: Props) {
-  const posts: Post[] = await fetch('http://localhost:3000/api/content')
+  const posts: Post[] = await fetch('http://flyspace.vercel.app/api/content')
     // ** Caching Method 2:
-    //  const posts: Post[] = await fetch('http://localhost:3000/api/content', {cache:'no-cache'}) // or 'force-cache', or...
+    //  const posts: Post[] = await fetch('http://flyspace.vercel.app/api/content', {cache:'no-cache'}) // or 'force-cache', or...
     .then(res => res.json())
   //! .catch()
 
