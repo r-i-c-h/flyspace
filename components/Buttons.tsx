@@ -7,7 +7,7 @@ import LoadingSpinner from "./LoadingSpinner/LoadingSpinner";
 
 export function SignInButton() {
   const { data: session, status } = useSession();
-  console.log('Client SignIn Button Auth check', session, status)
+  // console.log('Client SignIn Button Auth check', session, status)
 
   if (status === 'loading') {
     return <LoadingSpinner size={"32px"} />
