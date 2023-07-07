@@ -7,7 +7,7 @@ const posts = [
   {
     title: "The Benefits of Yoga",
     slug: "yoga-benefits",
-    content: "Yoga is a practice that originated in ancient India and has become increasingly popular around the world. There are many benefits of practicing yoga, including increased flexibility, improved strength, reduced stress and anxiety, and better sleep. If you're interested in trying yoga, there are many classes available at gyms, yoga studios, and community centers."
+    content: "Yoga is a practice that originated in ancient India and has become increasingly popular around the world. There are many benefits of practicing yoga, including increased flexibility, improved strength, reduced stress and anxiety, and better sleep. If you\'re interested in trying yoga, there are many classes available at gyms, yoga studios, and community centers."
   },
   {
     title: "Exploring the Outdoors",

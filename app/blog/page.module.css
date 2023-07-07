@@ -1,0 +1,5 @@
+.blogs_ul li {
+  list-style-type: none;
+  text-decoration: underline;
+  font-style: oblique;
+}

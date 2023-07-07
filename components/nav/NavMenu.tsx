@@ -19,6 +19,9 @@ export default function NavMenu() {
       <li>
         <Link href={'/about'}>About</Link>
       </li>
+      <li>
+        <Link href={'/blog'}>Blog</Link>
+      </li>
       <AuthCheck><li> <Link href={'/user-settings'}>User Settings</Link> </li></AuthCheck>
       <AuthCheck><li> <Link href={'/users'}>All Users List</Link> </li></AuthCheck>
       <li>
