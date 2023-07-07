@@ -44,6 +44,7 @@ export default async function UserProfile({ params }: Props) {
       <p>{bioText}</p>
 
       {/* @ts-expect-error Server Component issues */}
+      <p>In reality, users SHOULD NOT be able to follow themselves! But this is just a demo of the core idea since there is no actual only-followed-user feed.</p>
       <FollowButton targetUserId={params.id} />
     </div>
   );
