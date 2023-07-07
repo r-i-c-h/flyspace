@@ -18,8 +18,8 @@ export default async function Dashboard() {
     },
   });
 
-  return (<>
+  return (<main>
     <h1>User Settings Dashboard</h1>
     <ProfileForm user={user} />
-  </>);
+  </main>);
 }
