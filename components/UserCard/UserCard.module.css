@@ -1,6 +1,7 @@
 .card {
+  --card-width: 200px;
   background-color: #f1f1f1;
-  width: 150px;
+  width: var(--card-width);
   border-radius: var(--border-radius);
   box-shadow: 1px 1px 3px rgb(0 0 0 / 0.2)
 }
@@ -13,8 +14,8 @@
 }
 
 .card_image {
-  width: 150px;
-  height: 150px;
+  width: var(--card-width);
+  height: var(--card-width);
   object-fit: cover;
   margin-bottom: 0.5rem;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
